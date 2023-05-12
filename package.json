@@ -1,0 +1,15 @@
+{
+  "name": "demodashboard",
+  "version": "1.0.0",
+  "description": "dashboard testing",
+  "main": "index.js",
+  "scripts": {
+    "testSF": "cypress run --headless --browser chrome --record --key 8ff14b8b-143e-43d1-b23b-d743ae2fa165",
+    "testDemoQA": "cypress run --headless --browser chrome --record --key 8ff14b8b-143e-43d1-b23b-d743ae2fa165 --spec D://CypressProject//Cypress2022//DemoDashboard//cypress//e2e//ProjectScripts//testDemoQA.spec.js"
+  },
+  "author": "Demo dashboard",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  }
+}
