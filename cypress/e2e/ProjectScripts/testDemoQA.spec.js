@@ -36,11 +36,11 @@ describe('Elements Handles', function() {
         cy.get('button.rct-option-expand-all').click();
         cy.get('#tree-node-desktop').should('not.be.checked').check({force: true}).should('be.checked').uncheck({force: true});
 
-        //cy.get('input#tree-node-office').check({force: true});
+        
         cy.get('ol li.rct-node-leaf input').eq(1).check({force: true});
         cy.get('ol li.rct-node-leaf input').eq(1).uncheck({force: true});
 
-        cy.get('ol li.rct-node-leaf input').eq(1).should('be.checked');
+        //cy.get('ol li.rct-node-leaf input').eq(1).should('be.checked'); //To failed the testcase
 
         // cy.get('ol li.rct-node-leaf input').eq(2).check({force: true});
         // cy.get('ol li.rct-node-leaf input').eq(2).uncheck({force: true});
