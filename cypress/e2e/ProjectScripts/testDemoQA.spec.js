@@ -40,7 +40,7 @@ describe('Elements Handles', function() {
         cy.get('ol li.rct-node-leaf input').eq(1).check({force: true});
         cy.get('ol li.rct-node-leaf input').eq(1).uncheck({force: true});
 
-        cy.get('ol li.rct-node-leaf input').eq(1).should('be.checked'); //To failed the testcase
+        //cy.get('ol li.rct-node-leaf input').eq(1).should('be.checked'); //To failed the testcase
 
         // cy.get('ol li.rct-node-leaf input').eq(2).check({force: true});
         // cy.get('ol li.rct-node-leaf input').eq(2).uncheck({force: true});
@@ -49,7 +49,7 @@ describe('Elements Handles', function() {
         cy.get('ol li.rct-node-leaf input').each(($el, index, $list) => {
             cy.wrap($el).check({force: true});
             cy.wrap($el).uncheck({force: true});
-        })
+        }) 
 */
 
         cy.get('ol li.rct-node-leaf span.rct-title ').eq(1).prevUntil('span.rct-checkbox').click();
