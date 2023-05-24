@@ -11,7 +11,7 @@ pipeline {
 
         stage('e2e Tests') {
             steps {
-                npm run testDemoQA
+                bat 'npm run testDemoQA'
             }
         }
         stage('Deploy') {
