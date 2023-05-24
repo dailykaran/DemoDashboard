@@ -6,13 +6,12 @@ pipeline {
     environment {
         CHROME_BIN = '/bin/google-chrome'
     }
-    stage('Dependencies') {
-           steps {
-               bat 'npm i'
-           }
-       }
-
     stages {
+        stage('Dependencies') {
+               steps {
+                   bat 'npm i'
+            }
+        }
 
         stage('e2e Tests') {
             steps {
