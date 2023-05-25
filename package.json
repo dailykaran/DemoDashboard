@@ -6,7 +6,7 @@
   "scripts": {
     "testSF": "cypress run --headless --browser chrome --record --key 8ff14b8b-143e-43d1-b23b-d743ae2fa165",
     "testDemoQACypressdashboard": "cypress run --headless --browser chrome --record --key 8ff14b8b-143e-43d1-b23b-d743ae2fa165 --spec D://CypressProject//Cypress2022//DemoDashboard//cypress//e2e//ProjectScripts//DemoQA.cy.js",
-    "testDemoQA": "cypress run --headless --browser chrome --spec D://CypressProject//Cypress2022//DemoDashboard//cypress//e2e//ProjectScripts//DemoQA.cy.js"
+    "testDemoQA": "cypress run --headless --browser chrome --spec 'cypress//e2e//ProjectScripts//DemoQA.cy.js'"
 
   },
   "author": "Demo dashboard",
