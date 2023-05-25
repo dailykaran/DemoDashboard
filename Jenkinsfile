@@ -7,8 +7,7 @@ pipeline {
        CHROME_BIN = '/bin/google-chrome'
       
    }
-
-   stages {
+stages {
        stage('Dependencies') {
            steps {
                sh 'npm i'
@@ -20,13 +19,11 @@ pipeline {
                bat 'npm run testDemoQA'
                   }
                }
-
+       }
        stage('Deploy') {
            steps {
                echo 'Deploying....'
            }
        }
-   }
-}
-
+    }
 }
