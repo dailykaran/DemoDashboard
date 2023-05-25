@@ -14,11 +14,9 @@ stages {
            }
        }
        stage('e2e Tests') {
-             stage('Test 1') {
                   steps {
-               bat 'npm run testDemoQA'
+                    bat 'npm run testDemoQA'
                   }
-               }
        }
        stage('Deploy') {
            steps {
