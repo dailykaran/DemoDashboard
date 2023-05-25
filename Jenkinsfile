@@ -3,9 +3,7 @@ pipeline {
 
     tools {nodejs "node16"}
 
-    environment {
-        CHROME_BIN = '/bin/google-chrome'
-    }
+   
     stages {
         
         stage('Dependencies') {
@@ -16,6 +14,9 @@ pipeline {
 
         stage('e2e Tests') {
             Parallel{
+                 environment {
+                        CHROME_BIN = '/bin/google-chrome'
+                    }
                 stage('Test 1') {
                     steps {
                         bat 'npm run testDemoQA'
@@ -23,7 +24,7 @@ pipeline {
                 }
                 stage('Test 2') {
                     steps {
-                        bat 'npm run testDemoQA'
+                        bat 'npm run testDemoQA1'
                     }
                 }
             }
