@@ -1,40 +1,40 @@
 pipeline {
-    agent any
+   agent any
 
-    tools {nodejs "node16"}
+   tools {nodejs "Node16"}
 
-   
-    stages {
-        
-        stage('Dependencies') {
-            steps {
-                bat 'npm i'
-            }
-        }
+   environment {
+       CHROME_BIN = '/bin/google-chrome'
+      
+   }
 
-        stage('e2e Tests') {
-            Parallel{
-                 environment {
-                        CHROME_BIN = '/bin/google-chrome'
-                    }
-                stage('Test 1') {
-                    steps {
-                        bat 'npm run testDemoQA'
-                    }
-                }
-                stage('Test 2') {
-                    steps {
-                        bat 'npm run testDemoQA1'
-                    }
-                }
-            }
-        }
-    
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
+   stages {
+       stage('Dependencies') {
+           steps {
+               sh 'npm i'
+           }
+       }
+       stage('e2e Tests') {
+         Parallel{
+             stage('Test 1') {
+                  steps {
+               bat 'npm run testDemoQA'
+                  }
+               }
+             
+             stage('Test 2') {
+                  steps {
+                bat 'npm run testDemoQA1'
+                  }
+               }
+
+       }
+       stage('Deploy') {
+           steps {
+               echo 'Deploying....'
+           }
+       }
+   }
 }
 
+}
